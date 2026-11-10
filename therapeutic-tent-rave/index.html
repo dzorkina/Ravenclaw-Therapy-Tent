@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#0c2039">
+  <meta name="description" content="Терапевтический шатёр для Когтеврана. Метафорическая колода v.Rave. Когтеврану от Слизерина.">
+  <title>Терапевтический шатёр · v.Rave</title>
+  <link rel="icon" href="favicon.ico?v=rave2" sizes="any">
+  <link rel="icon" href="assets/favicon-32.png?v=rave2" type="image/png" sizes="32x32">
+  <link rel="apple-touch-icon" href="assets/favicon-192.png?v=rave2">
+  <link rel="preload" href="assets/curtains.webp" as="image">
+  <link rel="preload" href="assets/deck.webp" as="image">
+  <link rel="stylesheet" href="styles.css?v=rave2">
+  <script src="config.js?v=rave2" defer></script>
+  <script src="script.js?v=rave2" defer></script>
+</head>
+<body>
+  <div class="curtains" aria-hidden="true">
+    <div class="curtain curtain-left"></div>
+    <div class="curtain curtain-right"></div>
+  </div>
+  <div class="floor-mist" aria-hidden="true"><i></i><i></i><i></i></div>
+  <section class="entrance" id="entrance" aria-labelledby="welcome">
+    <header class="entrance-header">
+      <img class="crest" src="assets/eagle-gold.png" alt="" width="84" height="62">
+      <h1 class="site-name" id="welcome">Терапевтический шатёр</h1>
+    </header>
+    <div class="invitation">
+      <div class="ornament" aria-hidden="true"><span>✦</span></div>
+      <div class="intro-copy">
+        <p>Все знают о том, насколько вы креативны. Вы придумываете множество идей и, что важно, воплощаете их.</p>
+        <p>Но сколько идей, до которых вы пока не добрались?<br>Сколько навязчивых мыслей вокруг вас?</p>
+        <p>Иногда, чтобы не сойти с ума, нужно попытаться разложить все по полочкам.</p>
+        <p>Заходите в терапевтический шатер, возьмите колоду метафорических ассоциативных карт <em>v.Rave</em> и попробуйте понять…</p>
+      </div>
+      <button class="gold-button enter-button" id="enter" type="button">Войти</button>
+      <div class="ornament ornament-bottom" aria-hidden="true"><span>✧</span></div>
+    </div>
+    <footer class="dedication">Когтеврану от Слизерина</footer>
+  </section>
+  <main class="tent" id="tent" hidden aria-labelledby="tent-title">
+    <header class="tent-header">
+      <span class="header-star" aria-hidden="true">✧</span>
+      <h1 id="tent-title">Терапевтический шатёр</h1>
+      <span class="header-star" aria-hidden="true">✧</span>
+    </header>
+    <section class="table" aria-label="Стол с колодой карт">
+      <div class="stage" id="stage">
+        <button class="deck" id="deck" type="button" aria-label="Вытянуть карту" title="Вытянуть карту">
+          <img src="assets/deck.webp" alt="Синяя колода с золотыми змеями и перьями" width="1365" height="2048" draggable="false">
+        </button>
+        <button class="card" id="card" type="button" aria-label="Перевернуть карту" hidden disabled>
+          <span class="card-turner" id="card-turner">
+            <span class="card-side card-back"><img src="assets/card-back.webp" alt="Синяя рубашка с золотыми змеями и перьями" width="1024" height="1536" draggable="false"></span>
+            <span class="card-side card-front" aria-hidden="true"><img id="bird-card" alt="Метафорическая карта v.Rave" width="1024" height="1536" draggable="false"></span>
+          </span>
+        </button>
+      </div>
+      <div class="card-controls">
+        <p class="question">О чем говорят мозгошмыги.</p>
+        <div class="next-slot"><button class="gold-button next-button" id="next" type="button" hidden>Вытянуть ещё одну</button></div>
+        <p class="error-message" id="error" role="alert" hidden></p>
+      </div>
+    </section>
+    <footer class="tent-footer" aria-hidden="true"><span></span>✧<span></span></footer>
+  </main>
+  <p class="sr-only" id="status" role="status" aria-live="polite" aria-atomic="true"></p>
+  <noscript><div class="no-script">Чтобы войти в шатёр и вытянуть карту, включи JavaScript в браузере.</div></noscript>
+</body>
+</html>
